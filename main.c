@@ -14,7 +14,7 @@ int main(void) {
 	for (int i = 0; i < 5; i++) {
 		printCircle(c[i]);
 	}
-	point p;
+	point p; pee
 	p.x = 2;
 	p.y = 2;
 	translate(&c[1], &p);
