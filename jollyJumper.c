@@ -3,6 +3,10 @@
 #include <malloc.h>
 
 int isJollyJumber(const int seq[], int size) {
+  /* Create an array diffs_found equal in size to the size of the sequence that holds boolean values.
+ * Any difference found between the numbers in seq is set to true in diffs_found. If all the differences
+ * are found in seq then it must be a jolly jumper.
+*/
 
 bool diffs_found[size - 1];
   int diff;
@@ -29,4 +33,5 @@ bool diffs_found[size - 1];
   }
     return 1;
 }
+
 
