@@ -22,23 +22,22 @@ int main(void) {
 	printCircle(c[1]);
 	printf("isValid: %d", circleIsValid(&c[1]));
 
-	int n; /*number of numbers to read*/
-
+	int n; /* numbers to read
+	reading n and check that is is OK*/
+	scanf("%d", &n);
+	assert(0 < n);
+	
 	int *numbers = malloc(sizeof(int) * n); /*the numbers read*/
 
-	printf("Hvor mange integers er der i din sekvens? \n");
-  	scanf("%d", &n);
-	assert(n>1);
-	/*readin the n numbers in the array numbers*/
+	/*reading the n numbers in the array numbers*/
+	for(int i = 0; i < n; i++){
+		scanf("%d", &numbers[i]);
+	}
 
-	printf("Indtast sekvens af numre delt med mellemrum \n");
-  for (int i = 0; i < n; i++) {
-    scanf("%d", &numbers[i]);
-  }
-	if (isJollyJumber(numbers, n)) {
-		printf("it is a Jolly Jumper");}
+	if(isJollyJumber(numbers, n)) {
+		printf("it is a Jolly Jumper\n");}
 	else {
-		printf("not a Jolly Jumper");}
+		printf("not a Jolly Jumper\n");}
 	return 0;
 
 }
